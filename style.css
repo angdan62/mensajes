@@ -26,5 +26,7 @@ img{
 }
 
 p{
-color: white;
+    width: 80%;
+    color: white;
+    text-align: center;
 }
