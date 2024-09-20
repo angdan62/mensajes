@@ -10,7 +10,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2131c0;
+    background: #72a8caaf;
 }
 
 div{
@@ -27,7 +27,7 @@ img{
 
 p{
     width: 80%;
-    color: white;
+    color: #000;
     text-align: center;
 }
 
@@ -35,12 +35,13 @@ p{
     width: 40%;
     height: 40px;
     border-radius: 12px;
-    border: 1px solid white;
-    background: #2131c0 ;
-    color: white;
+    border: 1px solid 000;
+    background: none ;
+    color: #000;
     cursor: pointer;
 }
 
 #mensajeqr:hover{
     background: rgb(36, 35, 35);
+    color: #fff;
 }
