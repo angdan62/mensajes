@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+img{
+    max-width: 480px;
+}
+
+p{
+
+}
