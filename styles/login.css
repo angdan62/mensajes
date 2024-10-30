@@ -24,7 +24,6 @@ body{
 }
 
 .container{
-    border: 2px solid red;
     width: 80vw;
     height: 80vh;
     display: flex;
