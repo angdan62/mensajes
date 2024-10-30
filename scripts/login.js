@@ -5,6 +5,7 @@ const passwordInput = document.querySelector(".password");
 const submitInput = document.querySelector(".login");
 const forgetPassword = document.querySelector(".forgetPassword");
 const alertMessage = document.querySelector(".alertMessage");
+const keyUser = "e102f95572e59f8e8f4590e6dfd86f64d1dbd9b92ee9847e7875bedcecbe74d9";
 //CONTROL PARA CUANDO SE OLVIDÓ LA CONTRASEÑA
 
 forgetPassword.addEventListener("click", () =>{
@@ -21,12 +22,23 @@ forgetPassword.addEventListener("click", () =>{
 //CONTROL INICIAR SESIÓN
 
 submitInput.addEventListener("click", ()=>{
-    let passwordUser = passwordInput.value;
-    if(passwordUser == "081217"){
+    let passwordUser = encryptSHA256(passwordInput.value);
+    if(passwordUser == keyUser){
         window.open("./pages/main.html", "_self");
     }
     else{
         alertMessage.textContent = "Contraseña Incorrecta."
+        passwordInput.value="";
     }
 })
 
+passwordInput.addEventListener("click", ()=>{
+    alertMessage.textContent="";
+})
+
+
+//FUNCION PARA ENCRIPTAR KEY
+
+function encryptSHA256(text) {
+    return CryptoJS.SHA256(text).toString(CryptoJS.enc.Hex);
+  }
