@@ -8,7 +8,7 @@
 }
 
 body{
-    background-image: url("../img/love.jpg");
+    background-image: url("../img/login/love.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
