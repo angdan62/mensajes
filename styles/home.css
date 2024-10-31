@@ -159,8 +159,13 @@ ESTILADO DE MAIN
     transition: opacity 0.3s ease-in 0.4s;
   }
 
-
-
+.galery h3{
+    font-family: "Playwrite GB S", cursive;
+    text-align: center;
+    color: #fff;
+    font-size: 32px;
+    font-optical-sizing: auto;
+}
 
 
 
