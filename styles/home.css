@@ -11,11 +11,17 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    height: auto;
+}
+
 header, main, footer{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 header{
@@ -91,7 +97,6 @@ ESTILADO DE MAIN
 */
 
 .containerMain{
-    border: solid 2px red;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -102,7 +107,7 @@ ESTILADO DE MAIN
 
 /* ESTILADO DE INICIO */
 
-.home, .galery{
+.home, .galery, .videos, .music{
     width: 90%;
 }
 
@@ -116,22 +121,24 @@ ESTILADO DE MAIN
 }
 
 .containerHome p{
-    /* font-family: "Playwrite GB S", cursive; */
+    font-family: "Playwrite GB S", cursive;
+    font-size: 24px;
+    color: #bfbccf;
 }
 
 /* ESTILADO DE SECCION DE GALERIA */
 
 .cardsContainer{
     width: 100%;
-    height: 480px;
+    height: 720px;
     display: flex;
 }
 
-.panel {
+.panel, .panel2 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 80%;
+    height: 100%;
     border-radius: 50px;
     color: #fff;
     cursor: pointer;
@@ -150,38 +157,103 @@ ESTILADO DE MAIN
     opacity: 0;
   }
   
-  .panel.active {
+  .panel.active, .panel2.active2 {
     flex: 5;
   }
-  
-  .panel.active h3 {
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-  }
 
-.galery h3{
+.galery h3, .videos h3, .music h3{
     font-family: "Playwrite GB S", cursive;
+    margin-top: 24px;
     text-align: center;
-    color: #fff;
+    color: #bfbccf;
     font-size: 32px;
     font-optical-sizing: auto;
+    padding-bottom: 24px;
 }
 
 
+/* SECCION PARA INSERTAR VIDEOS */
+
+.videos{
+    height: auto;
+}
+.videoContainer{
+    margin-top: 24px;
+    width: 100%;
+    height: 720px;
+    max-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.videoContainer video{
+    height: 100%;
+    border: solid 5px #fff;
+    border-radius: 15px;
+}
 
 
+/* SECCION PARA INSERTAR MUSICA */
 
 
+.musicContainer{
+    margin-top: 24px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.song img{
+    width: 150px;
+    height: 150px;
+}
 
 
+/* DESARROLLO DEL FOOTER DE LA PAGINA */
+
+footer{
+    padding-top: 24px;
+    height: 240px;
+    color: #bfbccf;
+    color: #2a07aa;
+    align-items: flex-end;
+}
+
+.credits{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.credits h2{
+    font-size: 28px;
+}
+
+.credits h3{
+    font-size: 24px;
+}
+
+.credits p{
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 18px;
+}
 
 
-
-
-
-
-
-
+@media (width <= 480px) {
+    .videoContainer{
+        height: 320px;
+    }
+  }
 
 
 
@@ -191,6 +263,7 @@ ESTILADO DE MAIN
 
 
   @media (max-width: 480px) {
+
     .container {
       width: 100vw;
     }

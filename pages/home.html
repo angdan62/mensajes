@@ -25,23 +25,23 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Galería</a></li>
-                    <li><a href="#">Vídeos</a></li>
-                    <li><a href="#">Música</a></li>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#galery">Galería</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#music">Música</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="containerMain">
-            <section class="home">
+            <section class="home" id="home">
                 <h1 class="titleSection">Inicio</h1>
                 <div class="containerHome">
                     <p>“Me he pasado toda la vida esperándote... Quemarme es lo mejor que me ha pasado porque me llevó hasta ti. Quería morir, pero tú me llenaste con tanto amor que me desbordaste y fue imposible no amarte. Pasó antes de que me diera cuenta y ahora no puedo ni siquiera imaginar no amarte. Dices que me cuesta mucho creer en algo pero sí creo. Creo en tu amor por mí. Creo en mi amor por ti. Creo que te pertenecen todos los latidos que quedan en mi corazón y creo que cuando al final abandone este mundo en mi último aliento pronunciaré tu nombre. Creo que mi última palabra - Vane- será todo lo que necesite para saber que mi vida fue buena y plena y valió la pena y creo que nuestro amor durará para siempre.”</p>
                 </div>
             </section>            
-            <section class="galery">
+            <section class="galery" id="galery">
                 <h1 class="titleSection">Galería</h1>
                 <div class="cardsContainer">
                     <div class="panel active" style="background-image: url('../img/home/galery/001.jpg')">
@@ -62,16 +62,43 @@
                 </div>
                 <h3>Lorem ipsum</h3>
             </section>
-            <!-- <section class="videos">
+            <section class="videos" id="videos">
                 <h1 class="titleSection">Vídeos</h1>
+                <div class="videoContainer">
+                    <video controls>
+                        <source src="../img/home/videos/vi_001.mp4" type="video/mp4">
+                    </video>
+                    <video controls>
+                        <source src="../img/home/videos/vi_001.mp4" type="video/mp4">
+                    </video>                    <video controls>
+                        <source src="../img/home/videos/vi_001.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <h3>Lorem ipsum</h3>
             </section>
-            <section class="music">
+            <section class="music" id="music">
                 <h1 class="titleSection">Música</h1>
-            </section> -->
+                <div class="musicContainer">
+                    <a class="song" href="https://open.spotify.com/intl-es/track/3bP3RLXPFnGM4vtiXmmadq?si=0abcdf7dad27413c" target="_blank">
+                        <img src="../img/spotifyIcon.png" alt="Icon Spotify" id="spotifyIcon">
+                    </a>
+                    <a class="song" href="https://open.spotify.com/intl-es/track/3bP3RLXPFnGM4vtiXmmadq?si=0abcdf7dad27413c" target="_blank">
+                        <img src="../img/spotifyIcon.png" alt="Icon Spotify" id="spotifyIcon">
+                    </a>
+                    <a class="song" href="https://open.spotify.com/intl-es/track/3bP3RLXPFnGM4vtiXmmadq?si=0abcdf7dad27413c" target="_blank">
+                        <img src="../img/spotifyIcon.png" alt="Icon Spotify" id="spotifyIcon">
+                    </a>
+                </div>
+                <h3>Lorem ipsum</h3>
+            </section>
         </div>
     </main>
     <footer>
-
+        <div class="credits">
+            <h2>Desarrollado por:</h2>
+            <h3>Angel Cesar Villa Flores</h3>
+            <p>Con todo mi amor y cariño para la persona que siempre estuvo conmigo en las buenas y en las malas. Mi amiga y compañera que merece el mundo entero a sus pies.</p>
+        </div>
     </footer>
   </body>
 </html>
