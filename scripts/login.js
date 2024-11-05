@@ -5,7 +5,8 @@ const passwordInput = document.querySelector(".password");
 const submitInput = document.querySelector(".login");
 const forgetPassword = document.querySelector(".forgetPassword");
 const alertMessage = document.querySelector(".alertMessage");
-const keyUser = "e102f95572e59f8e8f4590e6dfd86f64d1dbd9b92ee9847e7875bedcecbe74d9";
+// const keyUser = "e102f95572e59f8e8f4590e6dfd86f64d1dbd9b92ee9847e7875bedcecbe74d9";
+const keyUser = "ahsajsndkjhaskdaksdkashd";
 //CONTROL PARA CUANDO SE OLVIDÓ LA CONTRASEÑA
 
 forgetPassword.addEventListener("click", () =>{
