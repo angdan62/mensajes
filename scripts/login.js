@@ -13,17 +13,6 @@ const keyUser = "3ea87a56da3844b420ec2925ae922bc731ec16a4fc44dcbeafdad49b0e61d39
 
 //CONTROL INICIAR SESIÓN
 
-passwordInput.addEventListener("enter", ()=>{
-    let passwordUser = encryptSHA256(passwordInput.value);
-    if(passwordUser == keyUser){
-        window.open("./pages/home.html", "_self");
-    }
-    else{
-        alertMessage.textContent = "Contraseña Incorrecta."
-        passwordInput.value="";
-    }
-})
-
 submitInput.addEventListener("click", ()=>{
     let passwordUser = encryptSHA256(passwordInput.value);
     if(passwordUser == keyUser){
