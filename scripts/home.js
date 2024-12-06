@@ -1,3 +1,5 @@
+import { getSpotifyData } from './apiSpotify.js';
+
 const videosList = document.querySelectorAll(".videoIcon");
 const videoShow = document.querySelector(".videoShow");
 const panelImages = document.querySelectorAll(".panel");
@@ -7,9 +9,11 @@ const videosTotal=4;
 
 // PARAMETROS DE INICIALIZACIÓN DE HTML
 
+// getSong();
 chargeRandomVideo();
 chargeRandomImage();
 chargeRandomSong();
+useSpotifyData();
 
 
 // GENERAR NUMERO ALEATORIO
@@ -57,6 +61,16 @@ function chargeRandomSong(){
     });
 }
 
+async function useSpotifyData() {
+    const data = await getSpotifyData();
+    if (data) {
+        console.log(data.items[0].track.uri); // Aquí puedes manipular los datos como desees
+        // Por ejemplo:
+        // data.items.forEach(item => console.log(item.name));
+    }
+}
+
+useSpotifyData();
 
 
 
