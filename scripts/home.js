@@ -1,24 +1,51 @@
-const videoList = document.querySelectorAll(".videoIcon");
+const videosList = document.querySelectorAll(".videoIcon");
 const videoShow = document.querySelector(".videoShow");
+const panelImages = document.querySelectorAll(".panel");
+const imageTotal=99;
+const videosTotal=4;
+
+// PARAMETROS DE INICIALIZACIÓN DE HTML
+
+chargeRandomVideo();
+chargeRandomImage();
 
 
-videoList.forEach(video => {
-    video.addEventListener("click", () =>{
-        playVideo();
-    })
-});
+// GENERAR NUMERO ALEATORIO
 
-
-function playVideo(){
-    videoShow.innerHTML=`<video class="videoPlay" width="100%" height="100%" controls>  
-                            <source src="../resources/home/videos/vi_001.mp4" type="video/mp4">   
-                        </video> "`
+function randomNumber(max){
+    return Math.floor(Math.random() * (max-1));
 }
 
 
 
+// CARGAR IMAGEN ALEATORIAMENTE AL HTML
+
+function chargeRandomImage(){
+    panelImages.forEach(panel => {
+        let randomImage = randomNumber(imageTotal);
+        panel.setAttribute('style', `background-image: url('../resources/home/galery/img_${randomImage}.jpg')`);
+    })
+}
 
 
+
+// CARGAR VIDEO ALEATORIAMENTE AL HTML
+
+function chargeRandomVideo(){
+
+    videosList.forEach(video => {
+        let randomVideo= randomNumber(videosTotal);
+        video.addEventListener("click", () =>{
+            playVideo(randomVideo)        
+        })
+    });
+}
+
+function playVideo(video){
+    videoShow.innerHTML=`<video class="videoPlay" width="100%" height="100%" controls autoplay>  
+            <source src="../resources/home/videos/video_${video}.mp4" type="video/mp4">   
+        </video> "`
+}
 
 
 

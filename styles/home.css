@@ -202,6 +202,15 @@ ESTILADO DE MAIN
     border-radius: 12px;
     width: 75%;
     height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videoShow img{
+height: 100%;
+max-width: 100%;
+border-radius: 12px;
 }
 
 /* SECCION PARA INSERTAR MUSICA */
