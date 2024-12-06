@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-libcurl": "^4.0.0"
+  },
+  "type": "module"
+}

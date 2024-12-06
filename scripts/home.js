@@ -1,6 +1,7 @@
 const videosList = document.querySelectorAll(".videoIcon");
 const videoShow = document.querySelector(".videoShow");
 const panelImages = document.querySelectorAll(".panel");
+const musicLink = document.querySelectorAll(".song")
 const imageTotal=99;
 const videosTotal=4;
 
@@ -8,6 +9,7 @@ const videosTotal=4;
 
 chargeRandomVideo();
 chargeRandomImage();
+chargeRandomSong();
 
 
 // GENERAR NUMERO ALEATORIO
@@ -47,8 +49,13 @@ function playVideo(video){
         </video> "`
 }
 
+// CARGAR MUSICA ALEATORIAMENTE AL HTML
 
-
+function chargeRandomSong(){
+    musicLink.forEach(song => {
+        song.setAttribute("href", `https://open.spotify.com/intl-es/track/3bP3RLXPFnGM4vtiXmmadq?si=0abcdf7dad27413c`);
+    });
+}
 
 
 
