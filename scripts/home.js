@@ -4,8 +4,8 @@ const videosList = document.querySelectorAll(".videoIcon");
 const videoShow = document.querySelector(".videoShow");
 const panelImages = document.querySelectorAll(".panel");
 const musicLink = document.querySelectorAll(".song")
-const imageTotal=99;
-const videosTotal=4;
+const imageTotal=802;
+const videosTotal=18;
 
 // PARAMETROS DE INICIALIZACIÓN DE HTML
 
