@@ -30,7 +30,7 @@ function randomNumber(max){
 function chargeRandomImage(){
     panelImages.forEach(panel => {
         let randomImage = randomNumber(imageTotal);
-        panel.setAttribute('style', `background-image: url('../resources/home/galery/img_${randomImage}.jpg')`);
+        panel.setAttribute('style', `background-image: url('../resources/home/galery/img_${randomImage}.jpg'`);
     })
 }
 
