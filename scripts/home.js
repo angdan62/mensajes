@@ -12,11 +12,12 @@ const videosTotal=4;
 // getSong();
 chargeRandomVideo();
 chargeRandomImage();
-chargeRandomSong();
+// chargeRandomSong();
 useSpotifyData();
 
 
 // GENERAR NUMERO ALEATORIO
+// AÑADIR VALIDACION PARA QUE NO SE REPITA EL NUMERO
 
 function randomNumber(max){
     return Math.floor(Math.random() * (max-1));
@@ -55,28 +56,25 @@ function playVideo(video){
 
 // CARGAR MUSICA ALEATORIAMENTE AL HTML
 
-function chargeRandomSong(){
+function chargeRandomSong(listSong){
     musicLink.forEach(song => {
-        song.setAttribute("href", `https://open.spotify.com/intl-es/track/3bP3RLXPFnGM4vtiXmmadq?si=0abcdf7dad27413c`);
+        let randomSong = randomNumber(listSong.length)
+        song.setAttribute("href", `${listSong[randomSong]}`);
     });
 }
 
 async function useSpotifyData() {
     const data = await getSpotifyData();
+    let listSong = [];
     if (data) {
-        console.log(data.items[0].track.uri); // Aquí puedes manipular los datos como desees
-        // Por ejemplo:
-        // data.items.forEach(item => console.log(item.name));
+        for(let i=0; i< data.items.length; i++){
+            // let songApi = data.items[i].track.uri;
+            let songApi = data.items[i].track.uri.replace("spotify:track:", "https://open.spotify.com/intl-es/track/");
+            listSong[i] = songApi;
+        }
+        chargeRandomSong(listSong);
     }
 }
-
-useSpotifyData();
-
-
-
-
-
-
 
 
 
