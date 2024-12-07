@@ -42,7 +42,7 @@ function chargeRandomVideo(){
 
     videosList.forEach(video => {
         let randomVideo= randomNumber(videosTotal);
-        randomVideo=32;
+        randomVideo=15;
         video.addEventListener("click", () =>{
             playVideo(randomVideo)        
         })
