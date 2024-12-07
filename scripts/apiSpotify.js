@@ -1,6 +1,7 @@
-// const clientID = "f5ae2032633c461f8ceb4abd61df48c2";
-// const clientSecret ="ddefaccde8e54ceeb20615df58dabb61";
-const playlistID ="3QMV90TUzT1JXQEj0op0bK";
+// const playlistID ="3QMV90TUzT1JXQEj0op0bK";
+// const playlistID ="2Gb52B4hTIA8XEvgCKipJL";
+const playlistID ="1pi6skwJ8FxLt2lLiEXdX5";
+
 
 
 const options = {
@@ -13,7 +14,7 @@ const options = {
 
 export async function getSpotifyData() {
     try{
-        let url =  `https://spotify23.p.rapidapi.com/playlist_tracks/?id=${playlistID}&offset=0&limit=5`;
+        let url =  `https://spotify23.p.rapidapi.com/playlist_tracks/?id=${playlistID}&offset=0&limit=100`;
         let res = await fetch(url, options);
         const data = await res.json();
         return data;

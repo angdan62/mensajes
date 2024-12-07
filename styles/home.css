@@ -3,11 +3,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Playwrite GB S", cursive;
     font-weight: 400;
     font-style: normal;
     text-align: justify;
-    font-size: 18px;
+    /* font-size: 18px; */
     box-sizing: border-box;
 }
 
@@ -112,7 +112,7 @@ ESTILADO DE MAIN
 }
 
 .titleSection{
-    font-family: "Playwrite GB S", cursive;
+    /* font-family: "Playwrite GB S", cursive; */
     font-optical-sizing: auto;
     text-align: center;
     font-size: 48px;
@@ -121,7 +121,7 @@ ESTILADO DE MAIN
 }
 
 .containerHome p{
-    font-family: "Playwrite GB S", cursive;
+    /* font-family: "Playwrite GB S", cursive; */
     font-size: 24px;
     color: #bfbccf;
 }
@@ -162,7 +162,7 @@ ESTILADO DE MAIN
   }
 
 .galery h3, .videos h3, .music h3{
-    font-family: "Playwrite GB S", cursive;
+    /* font-family: "Playwrite GB S", cursive; */
     /* margin-top: 24px; */
     text-align: center;
     color: #bfbccf;
@@ -236,9 +236,9 @@ border-radius: 12px;
 
 footer{
     padding-top: 24px;
-    height: 240px;
+    height: 200px;
     color: #bfbccf;
-    color: #2a07aa;
+    /* color: #2a07aa;  */
     align-items: flex-end;
 }
 
@@ -247,19 +247,10 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-}
-
-.credits h2{
-    font-size: 28px;
-}
-
-.credits h3{
-    font-size: 24px;
 }
 
 .credits p{
-    width: 40%;
+    width: 60%;
     text-align: center;
     font-size: 18px;
     padding-bottom: 18px;
@@ -267,6 +258,10 @@ footer{
 
 
 @media (width <= 480px) {
+
+    .menu ul{
+        font-size: 10px;
+    }
 
     .container {
         width: 100vw;
@@ -311,11 +306,11 @@ footer{
     footer{
         justify-content: center;
         align-items: center;
-        padding-top: o;
     }
     .credits p{
         font-size: 12px;
-        width: 100%;
+        width: 90%;
+        padding-bottom: 10px;
     }
 
   }
