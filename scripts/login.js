@@ -24,6 +24,13 @@ submitInput.addEventListener("click", ()=>{
     }
 })
 
+submitInput.addEventListener("keypress", ()=>{
+    if(e.key === "enter"){
+
+        alert("Enter message")
+    }
+})
+
 passwordInput.addEventListener("click", ()=>{
     alertMessage.textContent="";
 })
