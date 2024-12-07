@@ -134,7 +134,7 @@ ESTILADO DE MAIN
     display: flex;
 }
 
-.panel, .panel2 {
+.panel {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -157,8 +157,8 @@ ESTILADO DE MAIN
     opacity: 0;
   }
   
-  .panel.active, .panel2.active2 {
-    flex: 5;
+  .panel.active{
+    flex: 6;
   }
 
 .galery h3, .videos h3, .music h3{
