@@ -13,19 +13,16 @@ const storedPasswordHash = "e102f95572e59f8e8f4590e6dfd86f64d1dbd9b92ee9847e7875
 
 //CONTROL INICIAR SESIÓN
 
-submitInput.addEventListener("click", ()=>{
-    validatePassword(passwordInput.value);
-    
-})
-
-// Agregar evento al input
-passwordInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
+function handlePasswordEvent(e) {
+    if (e.type === "click" || (e.type === "keydown" && e.key === "Enter")) {
         validatePassword(passwordInput.value);
         e.preventDefault();
-    
     }
-});
+}
+
+// Agregar los eventos al botón y al input
+submitInput.addEventListener("click", handlePasswordEvent);
+passwordInput.addEventListener("keydown", handlePasswordEvent);
 
 // Función para validar la contraseña
 function validatePassword(password){
