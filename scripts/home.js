@@ -49,9 +49,9 @@ function chargeRandomVideo(){
 }
 
 function playVideo(video){
-    videoShow.innerHTML=`<video class="videoPlay" width="100%" height="100%" controls autoplay>  
+    videoShow.innerHTML=`<video class="videoPlay"  controls autoplay> 
             <source src="../resources/home/videos/video_${video}.mp4" type="video/mp4">   
-        </video> "`
+        </video>`
 }
 
 // CARGAR MUSICA ALEATORIAMENTE AL HTML
